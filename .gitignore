@@ -1,1 +1,4 @@
-ukb
+ukb/
+.vscode
+__pycache__
+co_result

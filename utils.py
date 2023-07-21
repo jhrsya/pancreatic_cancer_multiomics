@@ -14,7 +14,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
-
+import pandas as pd
 
 
 MAX_ITER = 8000
@@ -39,10 +39,6 @@ def get_sorted_list_by_data(data, label):
     # 排序
     sorted_idx = feature_importances.argsort()[::-1]
     top_features = [feature_names[i] for i in sorted_idx]
-    # summarize the effects of all the features
-    # 绘制特征重要性条形图并获取特征重要性数据
-    # shap.summary_plot(shap_values, train_data, plot_type='bar', max_display=20)
-
 
     # 对前面的特征进行排序训练
 
